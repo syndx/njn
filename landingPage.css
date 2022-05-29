@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Rubik+Wet+Paint&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #366469;
+    color: #F7F7F7;
+}
+
+
+nav {
+    position: fixed;
+    width: 100vw;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#366469;
+}
+
+.logo span {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size: 35px;
+    font-weight: 500;
+    color: #FF7800;
+}
+
+
+.nav-links {
+    width: 50%;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.nav-links a {
+    font-size: 18px;
+    color: #F7F7F7;
+    text-decoration: none;
+}
+
+nav .hamburger {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+nav .hamburger span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    background-color: #F7F7F7;
+}
+
+nav .hamburger span::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    top: 10px;
+    background: #F7F7F7;
+}
+
+nav .hamburger span::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    top: -10px;
+    background: #F7F7F7;
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    padding: 150px 30px 100px;
+}
+
+.content .text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.content .text h1 {
+    font-size: 3em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.content .text p {
+    margin-top: 20px;
+    opacity: 0.8;
+    line-height: 2;
+}
+
+.content .img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.content .img img {
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 960px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    
+    :root {
+        font-size: 16px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    .content {
+        padding-top: 150px;
+        flex-direction: column;
+    }
+
+    .content img {
+        margin-top: 50px;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .content .text h1{
+        font-size: 2em;
+    }
+
+}
+
+
+@media (min-height: 1024px) {
+    .content {
+        flex-direction: column;
+    }
+}
